@@ -4,9 +4,9 @@ import { capitalizeFirstLetter } from "../../utils/helpers";
 function Nav(props) {
   const { categories = [], setCurrentCategory, currentCategory } = props;
 
-  useEffect(() => {
-    document.title = capitalizeFirstLetter(currentCategory.name);
-  }, [currentCategory]);
+  // useEffect(() => {
+  //   document.title = capitalizeFirstLetter(currentCategory.name);
+  // }, [currentCategory]);
 
   const handleClick = (item) => {
     console.log(item);
