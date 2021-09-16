@@ -6,6 +6,8 @@ import SomeComponent from "./components/Stopwatch";
 import ContactForm from "./components/Contact";
 
 function App() {
+  const [contactSelected, setContactSelected] = useState(false);
+
   const [categories] = useState([
     {
       name: "commercial",
@@ -28,12 +30,28 @@ function App() {
         categories={categories}
         setCurrentCategory={setCurrentCategory}
         currentCategory={currentCategory}
+        contactSelected={contactSelected}
+        setContactSelected={setContactSelected}
       ></Nav>
       <main>
-        <ContactForm></ContactForm>
-        <Gallery currentCategory={currentCategory}></Gallery>
-        <About></About>
-        <SomeComponent></SomeComponent>
+        {/* ternary operator version (? and :) */}
+        {!contactSelected ? (
+          <>
+            <Gallery currentCategory={currentCategory}></Gallery>
+            <About></About>
+          </>
+        ) : (
+          <ContactForm></ContactForm>
+        )}
+        {/* is the same as */}
+        {/* if(!contactSelected) {
+          <>
+            <Gallery currentCategory={currentCategory}></Gallery>
+            <About></About>
+          </>
+        } else {
+          <ContactForm></ContactForm>
+        } */}
       </main>
     </div>
   );
