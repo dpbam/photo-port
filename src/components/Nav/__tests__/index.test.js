@@ -8,6 +8,8 @@ import Nav from "..";
 // ];
 // const mockCurrentCategory = jest.fn();
 // const mockSetCurrentCategory = jest.fn();
+// const mockContactSelected = jest.fn();
+// const mockSetContactSelected = jest.fn();
 
 // it("renders", () => {
 //   render(
@@ -15,6 +17,8 @@ import Nav from "..";
 //       categories={categories}
 //       setCurrentCategory={mockSetCurrentCategory}
 //       currentCategory={mockCurrentCategory}
+//      contactSelected={mockContactSelected}
+//      setContactSelected={mockSetContactSelected}
 //     />
 //   );
 // });
